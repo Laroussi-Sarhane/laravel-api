@@ -26,6 +26,9 @@ Route::get('/projects/{id}', [ProjectController::class, 'show'])->name('projects
 
 Route::get('/',[PageController::class,'index'])->name('home');
 
+
+
+
 Route::middleware(['auth', 'verified'])
                 ->prefix('admin')
                 ->name('admin.')
